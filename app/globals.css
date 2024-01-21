@@ -1,0 +1,336 @@
+
+
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+  }
+  .search{
+        margin-top: 16px ;
+  }
+  .input1{
+    width: 100%;
+  padding: 8px;
+  border-width: 1px;
+  border-color: #e2e8f0;
+  border-radius: 4px;
+  }
+
+  .main1{
+    padding: 16px;
+  }
+
+  .Input{
+    margin-bottom: 16px;
+  }
+  
+  h2{
+    border-bottom: solid rgb(206, 203, 203) 1px;
+  }
+  
+  input{
+    height: 25px;
+    background-color: rgb(228, 231, 235);
+    border-radius: 3px;
+    border: solid rgb(214, 212, 209) 1px;
+    padding: 10px;
+  }
+  
+  .radioinput input{
+    width: 13px;
+  }
+  
+  .radioinput{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  header{
+    background-color: rgb(72, 123, 175);
+  }
+  
+  
+  #searchbar{
+    display: flex;
+  
+    width: 30%;
+  }
+  #btn{
+    width: 50px;
+    height: 24px;
+  }
+  #logo{
+    font-size: 13px;
+    width: 18%;
+    font-weight: bolder;
+  }
+  #navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  
+  }
+  
+  .navlist{
+    text-decoration: none;
+    color: black;
+  }
+  #sidebarnav{
+    height: 100vh;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-right: solid 2px rgb(165, 163, 163);
+    padding: 10px;
+    margin-top: 8px;
+  }
+  .sidebarcontent{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+  }
+  
+  
+  
+  .main{
+    display: flex;
+    gap: 22px;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  
+  .heading2{
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .heading1{
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .labels{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .li{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .bigdiv input{
+    width: 100%;
+  }
+  
+  .projectdetails{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  
+  
+  #head2div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  
+  #sidebardiv{
+    width: 20%;
+  }
+  #formdiv{
+    width: 75%;
+  }
+  
+  #mainlabel{
+    font-size: 14px;
+    font-weight: 750;
+  }
+  
+  .longlabels label{
+    max-width: 340px;
+  }
+  
+  .Adrlabels input{
+    width: 500px;
+    height: 45px;
+  }
+  
+  .pdflex{
+    display: flex;
+    gap: 40px;
+    margin-left: 6px;
+  }
+  
+  .openlabel{
+    font-weight: 750;
+  }
+  .main{
+    width : 100%;
+    display : flex;
+}
+.side{
+    width : 20%;
+    display: block;
+    color: #26292e; /* This is an approximation of Tailwind's text-gray-700 */
+     /* This corresponds to Tailwind's text-sm */
+    font-weight: bold; /* This corresponds to Tailwind's font-bold */
+    margin-bottom: 8px; /* This corresponds to Tailwind's mb-2 */
+    margin-right: 10px;
+
+}
+.headdiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text-lg {
+  font-size: 1.125rem/* 18px */;
+  line-height: 1.75rem/* 28px */;
+}
+.mx2{
+    margin-left: 8px;
+    margin-right: 8px;
+    text-decoration: none;
+    color: black;
+}
+.mt2{
+
+    margin-top: 8px;
+}
+.header1{
+  padding: 1rem/* 16px */;
+  --tw-bg-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.form{
+    width : 80%;
+    display : flex;
+    flex-direction: row;
+
+}
+
+.content {
+   
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Use space-around for equal spacing */
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Ensure the input elements take up equal width */
+  .input {
+    flex: 1;
+    margin: 0 5px; /* Adjust the margin based on your preference */
+  }
+  .label{
+    
+        display: block;
+        color: #4a5568; /* This is an approximation of Tailwind's text-gray-700 */
+        font-size: 14px; /* This corresponds to Tailwind's text-sm */
+        font-weight: bold; /* This corresponds to Tailwind's font-bold */
+        margin-bottom: 8px; /* This corresponds to Tailwind's mb-2 */
+    
+  }
+  .maininput {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 8px 12px;
+    color: #4a5568;
+    line-height: 1.75;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    width: 375px;
+    height: 24px ;
+    
+  }
+  .input:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  }
+  .app{
+    .container {
+        width: 100%;
+    }
+    @media (min-width: 640px) {
+        .container {
+            max-width: 640px;
+        }
+    }
+    @media (min-width: 768px) {
+        .container {
+            max-width: 768px;
+        }
+    }
+    margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  }
+
+  .sidebar{
+        --tw-bg-opacity: 1;
+        background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+        padding: 16px;
+        text-decoration: none;
+  }
+  .sidebar .link1 {
+    display: block;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: #0a0a0b; /* This is an approximation of Tailwind's text-gray-700 */
+    font-size: 18px; /* This corresponds to Tailwind's text-sm */
+    font-weight: bold; /* This corresponds to Tailwind's font-bold */
+    margin-bottom: 8px; /* This corresponds to Tailwind's mb-2 */
+}
+.sidebar .h2{
+    margin-bottom:  16px ;
+    font-weight: 700;
+    font-size: 18px ;
+    line-height:28px ;
+}
+
+.sec{
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+.Nextbtn{
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  
+    
+}
+.Nextbtn a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.Nextbtn:hover{
+  background-color: #93c5fd;
+}
+.btn1{ 
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
