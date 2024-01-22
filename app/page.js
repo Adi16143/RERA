@@ -1,9 +1,10 @@
 "use client"
 import React from 'react';
+import Link from 'next/link';
 import Header from './Components/Header';
 import Sidebar from './Components/Sidebar';
 // import Form from './Components/ProjectDetails';
-import Form from './DevelopmentDetails';
+import Form from './Components/DevelopmentDetails';
 // import Form from './Components/ProjectD';
 
 
@@ -11,7 +12,7 @@ import Form from './DevelopmentDetails';
 // const Header = () => (
 //   <header className="p-4 bg-blue-500 text-white">
 //     <div className="flex justify-between items-center">
-//       <h1 className="text-lg">Telangana REAL ESTATE REGULATORY AUTHORITY GOVERNMENT OF GUJARAT</h1>
+//       <h1 className="text-lg">Telangana REAL ESTATE REGULATORY AUTHORITY </h1>
 //       <nav>
 //         <a href="#" className="mx-2">Home</a> | <a href="#" className="mx-2">FAQ</a> | <a href="#" className="mx-2">Map</a>
 //       </nav>

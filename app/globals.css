@@ -119,6 +119,12 @@
     align-items: center;
     gap: 10px;
   }
+  .labelsD{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
   
   .li{
     display: flex;
@@ -257,6 +263,19 @@
     outline: 2px solid transparent;
     outline-offset: 2px;
     width: 375px;
+    height: 24px ;
+    
+  }
+  .labelsD .maininput  {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 8px 12px;
+    color: #4a5568;
+    line-height: 1.75;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    width: 275px;
     height: 24px ;
     
   }

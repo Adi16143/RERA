@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import Link from "next/link";
 const Input = ({ label, placeholder }) => (
   <div class="Input">
@@ -6,8 +6,9 @@ const Input = ({ label, placeholder }) => (
     <input class ="maininput" type="text" placeholder={placeholder} />
   </div>
 );
-const Form = () => (
 
+
+  const Form = () => (
     <form>  
         <h2 class="heading1">INVENTORY DETAILS</h2>
         <div class='projectdetails'>
@@ -88,56 +89,111 @@ const Form = () => (
         </div>
         <div>
             < section >
+
               <h2 class="heading1">OTHER INTERNAL DEVELOPMENT WORK</h2>
               <h2 class="heading1">WATER SUPPLY</h2>
-              <div class='projectdetails'>
-              <div class="labels">
-                 <Input label="1.35 Fire Station Distance from the Projects(Km)" placeholder="2" />
-                 <Input label="1.36 Multi-Speciality Hospital Distance From Projects(Km)" placeholder="2" />
-                 <Input label="1.37 Main Railways Station Distance from the Projects(Km)" placeholder="2" />
-              </div>          
-              <div class="labels">
-                 <Input label="1.38 Police Station Distance from the Projects(Km)" placeholder="2" />
-                 <Input label="1.39 Public Garden Distance From Projects(Km)" placeholder="2" />
-                 <Input label="1.40 Public Transit Distance from the Projects(Km)" placeholder="2" />
-              </div> 
-              <div class="labels longlabels">
-                 <Input label="1.41 ULB Service delivery point Distance from the Projects(Km)" placeholder="2" />
-                 <Input label="1.42 Airport Distance From Projects(Km)" placeholder="2" />
+             < div class = "projectdetails">
+              <div class = "labels">
+              <label>2.14 Whether Drinking Water is to be obtained from Municipal/Local Authority Pipe Line</label>
+              <select class = "maininput">
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+              </select>
               </div>
-              </div>
+              <div class = "labels">
+              <label>
+                Total quantity of drinking water required for the project as per NBC:
+                (Residential)(Commercial)
+                <div>
+                <input type="number" />
+                <input type="number" />
+                <input type="text" />
+                </div>
+                </label>
+                </div>
+                <div class = "radioinput">
+                  <label class="openlabel"> (d) Water to be supplied from:</label>
+                  <input type="radio" placeholder="" name='tparea'/>Borewell at Project Site
+                  <input type="radio" placeholder="" name='tparea'/>Tankers
+                  <input type="radio" placeholder="" name='tparea'/>Other
+                  </div>
+                  </div>
               
             </ section>
-    
-            < section >
-              <h2 class="heading1">GROUND WATER LEVEL</h2>
-              <div class='projectdetails'>
-                <label class="openlabel">1.43 Soil Testing report*</label>
-                <h4>Not Applicable</h4>
-              </div>
-            </ section>
-    
-              <h2 class="heading3">BANK DETAIL</h2>
+            <h2 class="heading3">SEWARAGE DISPOSAL</h2>
               < section className="bankDetail">
-              <div class="labels">
-              <Input label="1.44 A/c Holder Name as per Bank Statement/ Passbook" placeholder="" />
-              <Input label="1.45 Account Number" placeholder="" required />
-              <Input label="1.46 IFSC Code" placeholder="" />
+              <div class="projectdetails">
+              <label>
+                2.15 Whether sewerage pipe line of Municipal/local authority is available near by the project site to which sewerage line of project can be connected?
+                <select name="seweragePipeLine">
+                   <option value="No">No</option>
+                   <option value="Yes">Yes</option>
+                </select>
+              </label>
+              <label>
+                 (a) Quantity of sewerage which is expected to generate from the project as per NBC
+                 <input type="number" name="residentialSewerage"  />
+                 (Residential)
+                 <input type="number" name="commercialSewerage"  />
+                 (Commercial)
+              </label>
+              <label>
+                 (b) Total quantity of sewerage proposed to be provided for the project
+                  <input type="number" name="totalSewerage"  />
+              </label>
+              <label>
+                  How sewerage of the project will be treated
+                <select name="treatmentMethod" >
+                  <option value="STP at Project Site">STP at Project Site</option>
+                  <option value="Septic Tank with Soak Well">Septic Tank with Soak Well</option>
+                < option value="Other">Other</option>
+        </select>
+      </label>
+      <label>
+        Whether recycling of treated effluent is proposed
+        <select name="recyclingProposed">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+        </select>
+      </label>
               </div>
-              <div class="labels">
-              <Input label="1.47 Bank Name" placeholder="" />
-              <Input label="1.48 Branch Name" placeholder="" />
-              <Input label="1.49 Pincode" placeholder="mojlo/abc" />
-              </div>
-              <div class="labels">          
-              <Input label="1.50 State/UT" placeholder="mojlo/abc" />
-              <Input label="1.51 District" placeholder="mojlo/abc" />
-              <Input label="1.52 Taluka" placeholder="mojlo/abc" />
-              </div>
-              <Input label="1.53 RERA Bank Account Statement or First Page of Passbook" placeholder="mojlo/abc" />
+              
               {/* Add more input fields as needed */}
           
             </ section>
+    
+            < section >
+              <h2 class="heading1">SOLID WASTE DISPOSAL</h2>
+              <div class='radioinput'>
+              <label class="openlabel"> 2.16 Solid Waste Disposal from the project</label>
+                  <input type="radio" placeholder="" name='tparea'/>Local Authority
+                  <input type="radio" placeholder="" name='tparea'/>Other
+              </div>
+            </ section>
+            <h2 class="heading3">SWIMMING POOL</h2>
+              < section className="bankDetail">
+              <div class="projectdetails">
+              <label>
+                2.17 Swimming pool capacity (For Project cost &gt; 100 crores)
+                <select name="seweragePipeLine">
+                   <option value="No">No</option>
+                   <option value="Yes">Yes</option>
+                </select>
+              </label>
+              <div class="labelsD">
+            <Input label="Length (Mtrs)" placeholder="10" />
+            <Input label="Breadth (Mtrs)" placeholder="10" />
+            <Input label="Average Water Depth (Mtrs)" placeholder="10" />
+            <Input label="Capacity (Litres)" placeholder="1000000.00" />
+          </div>
+              </div>
+              
+              {/* Add more input fields as needed */}
+          
+            </ section>
+            
+    
+             
     
             {/* Add more  sections as needed */}
     
@@ -151,4 +207,5 @@ const Form = () => (
         {/* Add more input fields or other form elements as needed */}
       </form>
     );
+    
     export default Form;

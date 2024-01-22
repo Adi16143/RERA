@@ -1,5 +1,5 @@
 import React from "react";
-import Form1 from "../DevelopmentDetails";
+import Form from "./DevelopmentDetails";
 import Link from "next/link";
 const Input = ({ label, placeholder }) => (
   <div class="Input">
