@@ -3,8 +3,9 @@ import React from 'react';
 import Link from 'next/link';
 import Header from './Components/Header';
 import Sidebar from './Components/Sidebar';
-// import Form from './Components/ProjectDetails';
-import Form from './Components/DevelopmentDetails';
+import Form from './Components/ProjectDetails';
+import Main from './Components/Main';
+// import Form from './Components/DevelopmentDetails';
 // import Form from './Components/ProjectD';
 
 
@@ -28,20 +29,20 @@ import Form from './Components/DevelopmentDetails';
 //   </header>
 // );
 
-// Search component
-const Search = () => (
-  <div className="search">
-    <input type="text" placeholder="Project Name, Builder, Agent" class="input1" />
-  </div>
-);
+// // Search component
+// const Search = () => (
+//   <div className="search">
+//     <input type="text" placeholder="Project Name, Builder, Agent" class="input1" />
+//   </div>
+// );
 
-// Main component
-const Main = () => (
-  <main class="main1">
-    <Search />
-    {/* Add other components as needed */}
-  </main>
-);
+// // Main component
+// const Main = () => (
+//   <main class="main1">
+//     <Search />
+//     {/* Add other components as needed */}
+//   </main>
+// );
 
 
 //Input component
@@ -355,7 +356,7 @@ const Input = ({ label, placeholder }) => (
 // App component
 const App = () => (
   <div class="app">
-    <Main />
+    {/* <Main />
     <Header />
     <div class = "main">
       <div class = "side">
@@ -363,7 +364,8 @@ const App = () => (
       <div class = "form">
       <Form />
       </div>
-    </div>
+    </div> */}
+    <Form />
     {/* <Form1 /> */}
   </div>
 );

@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "./DevelopmentDetails";
+// import Form1 from "./DevelopmentDetails";
 import Link from "next/link";
 const Input = ({ label, placeholder }) => (
   <div class="Input">
@@ -142,10 +142,12 @@ const Form = () => (
             {/* Add more  sections as needed */}
     
             <div class = "btn1">
+            <Link href = "/DevelopD">
               <button class = "Nextbtn"type="submit">
-                <Link href = "/DevelopmentDetails"> Next</Link>
+                Next
                
               </button>
+              </Link>
             </div>
           </div>
         {/* Add more input fields or other form elements as needed */}

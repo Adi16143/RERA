@@ -353,3 +353,12 @@
   justify-content: center;
   align-items: center;
 }
+
+.label1{
+  margin-bottom: 10px;
+}
+
+.labels1 input select{
+  padding: 5px;
+  margin-top: 5px;
+}

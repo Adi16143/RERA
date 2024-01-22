@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Link from "next/link";
 const Input = ({ label, placeholder }) => (
@@ -8,7 +9,7 @@ const Input = ({ label, placeholder }) => (
 );
 
 
-  const Form = () => (
+  const Form1 = () => (
     <form>  
         <h2 class="heading1">INVENTORY DETAILS</h2>
         <div class='projectdetails'>
@@ -123,7 +124,7 @@ const Input = ({ label, placeholder }) => (
             <h2 class="heading3">SEWARAGE DISPOSAL</h2>
               < section className="bankDetail">
               <div class="projectdetails">
-              <label>
+              <label class = "label1">
                 2.15 Whether sewerage pipe line of Municipal/local authority is available near by the project site to which sewerage line of project can be connected?
                 <select name="seweragePipeLine">
                    <option value="No">No</option>
@@ -199,7 +200,7 @@ const Input = ({ label, placeholder }) => (
     
             <div class = "btn1">
               <button class = "Nextbtn"type="submit">
-                <Link href = "/DevelopmentDetails"> Next</Link>
+                <Link href = "/DocumentsUpload"> Next</Link>
                
               </button>
             </div>
@@ -208,4 +209,4 @@ const Input = ({ label, placeholder }) => (
       </form>
     );
     
-    export default Form;
+    export default Form1;
