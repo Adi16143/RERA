@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Link from "next/link";
 const Input = ({ label, placeholder }) => (
   <div class="Input">
-    <label class ="label">{label}</label>
+    <label class ="labels1">{label}</label>
     <input class ="maininput" type="text" placeholder={placeholder} />
   </div>
 );
@@ -200,7 +200,7 @@ const Input = ({ label, placeholder }) => (
     
             <div class = "btn1">
               <button class = "Nextbtn"type="submit">
-                <Link href = "/DocumentsUpload"> Next</Link>
+                <Link href = "/Professionals"> Next</Link>
                
               </button>
             </div>

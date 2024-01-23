@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from "react";
+import Link from "next/link";
 import './Style.css';
 function AddProfessionals(){
     return(
@@ -41,7 +42,7 @@ const MyForm = () => {
       <div className="forms">
         <div className="heading"><br></br>
         <h2>AGENT (ONLY REGISTERED WITH GUJRERA)</h2>
-        <p>(SEE SECTION 4.11. GENERAL RULE 3.4. AUTHORITY RULE 10. REGULATION AND ORDERS)</p>
+        {/* <p>(SEE SECTION 4.11. GENERAL RULE 3.4. AUTHORITY RULE 10. REGULATION AND ORDERS)</p> */}
         <hr></hr>
         </div>
        
@@ -162,11 +163,11 @@ const MyForm = () => {
       <div className="forms">
         <div className="heading">
         <h2>ARCHITECT (ONLY REGISTERED WITH GUJRERA)</h2>
-        <p>(SEE SECTION 4.11. GENERAL RULE 3.4. AUTHORITY RULE 10. REGULATION AND ORDERS)</p>
+        {/* <p>(SEE SECTION 4.11. GENERAL RULE 3.4. AUTHORITY RULE 10. REGULATION AND ORDERS)</p> */}
         <hr></hr>
         </div>
       <form className="my-form" onSubmit={handleSubmit}>
-          <table border="1" className="my-table">
+          {/* <table border="1" className="my-table">
             <thead>
               <tr>
                 <th>Sr No.</th>
@@ -183,9 +184,9 @@ const MyForm = () => {
             <tbody>
               <tr>
                 <td>1</td>
-                <td>SAURABH ANILKUMAR JAIN</td>
-                <td>tect123@gmail.com</td>
-                <td>8764543534</td>
+                <td>xyz</td>
+                <td>xyz123@gmail.com</td>
+                <td>1234567890</td>
                 <td>6, Shreedhay society, opp</td>
                 <td>23</td>
                 <td>43</td>
@@ -193,7 +194,7 @@ const MyForm = () => {
                <button className="submit-button">Delete</button>
               </tr>
             </tbody>
-          </table>
+          </table> */}
           <br></br>
           <div className="form-group">
           <label>
@@ -277,11 +278,11 @@ const MyForm = () => {
       <div className="forms">
       <div className="heading">
         <h2>STRUCTURAL (ONLY REGISTERED WITH GUJRERA)</h2>
-        <p>(SEE SECTION 4.11. GENERAL RULE 3.4. AUTHORITY RULE 10. REGULATION AND ORDERS)</p>
+        {/* <p>(SEE SECTION 4.11. GENERAL RULE 3.4. AUTHORITY RULE 10. REGULATION AND ORDERS)</p> */}
         <hr></hr>
       </div>
       <form className="my-form" onSubmit={handleSubmit}>
-          <table border="1" className="my-table">
+          {/* <table border="1" className="my-table">
             <thead>
               <tr>
                 <th>Sr No.</th>
@@ -290,7 +291,7 @@ const MyForm = () => {
                 <th>Mobile No.</th>
                 <th>PAN No.</th>
                 <th>Address</th>
-                <th>PEin Yrs.</th>
+                <th>PE in Yrs.</th>
                 <th>No. of key Projects</th>
                 <th>License. No</th>
                 <th>Action</th>
@@ -299,10 +300,10 @@ const MyForm = () => {
             <tbody>
               <tr>
                 <td>1</td>
-                <td>SAURABH ANILKUMAR JAIN</td>
-                <td>tect123@gmail.com</td>
-                <td>8764543534</td>
-                <td>AEWPD8802P</td>
+                <td>xyz</td>
+                <td>text123@gmail.com</td>
+                <td>1234567890</td>
+                <td>ABCDFE8802P</td>
                 <td>Hyderabad</td>
                 <td>43</td>
                 <td>34</td>
@@ -310,7 +311,7 @@ const MyForm = () => {
                <button className="submit-button">Delete</button>
               </tr>
             </tbody>
-          </table>
+          </table> */}
           <br></br>
           <div className="form-group">
           <label>
@@ -399,11 +400,11 @@ const MyForm = () => {
       <div className="forms">
       <div className="heading">
         <h2>CONTRACTOR (ONLY REGISTERED WITH GUJRERA)</h2>
-        <p>(SEE SECTION 4.11. GENERAL RULE 3.4. AUTHORITY RULE 10. REGULATION AND ORDERS)</p>
+        {/* <p>(SEE SECTION 4.11. GENERAL RULE 3.4. AUTHORITY RULE 10. REGULATION AND ORDERS)</p> */}
         <hr></hr>
       </div>
       <form className="my-form" onSubmit={handleSubmit}>
-          <table border="1" className="my-table">
+          {/* <table border="1" className="my-table">
             <thead>
               <tr>
                 <th>Sr No.</th>
@@ -430,7 +431,7 @@ const MyForm = () => {
                <button className="submit-button">Delete</button>
               </tr>
             </tbody>
-          </table>
+          </table> */}
           <br></br>
           <div className="form-group">
           <label>
@@ -487,13 +488,16 @@ const MyForm = () => {
         </button>
         
         <br></br>
+        <Link href = "/DevelopD">
         <button  className="submit-buttons">
          Previous
         </button>
+        </Link>
+        <Link href = "/DocumentsUpload">
         <button className="submit-button">
          Next
         </button>
-        
+        </Link>
         </form>
         </div>
     );

@@ -10,8 +10,12 @@
   }
   .heading{
     align-items: center;
-    line-height: 100%;
+    /* line-height: 100%; */
     margin-bottom: 10px;
+  }
+  .heading h2{
+  
+      border-bottom: solid rgb(206, 203, 203) 1px;
   }
   .forms
   {

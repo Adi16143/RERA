@@ -7,6 +7,7 @@
     
   }
   .search{
+        width: 50%;
         margin-top: 16px ;
   }
   .input1{
@@ -18,6 +19,9 @@
   }
 
   .main1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 16px;
   }
 
@@ -201,6 +205,11 @@
   justify-content: space-between;
   align-items: center;
 }
+.headdiv1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .text-lg {
   font-size: 1.125rem/* 18px */;
   line-height: 1.75rem/* 28px */;
@@ -253,6 +262,15 @@
         margin-bottom: 8px; /* This corresponds to Tailwind's mb-2 */
     
   }
+  labels1{
+    display: block;
+    color: #4a5568; /* This is an approximation of Tailwind's text-gray-700 */
+    font-size: 14px; /* This corresponds to Tailwind's text-sm */
+    font-weight: bold; /* This corresponds to Tailwind's font-bold */
+    margin-bottom: 8px;
+    width: 250px; /* This corresponds to Tailwind's mb-2 */
+
+  }
   .maininput {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     border-width: 1px;
@@ -263,7 +281,7 @@
     outline: 2px solid transparent;
     outline-offset: 2px;
     width: 375px;
-    height: 24px ;
+    height: 30px ;
     
   }
   .labelsD .maininput  {
@@ -315,13 +333,14 @@
     color: #0a0a0b; /* This is an approximation of Tailwind's text-gray-700 */
     font-size: 18px; /* This corresponds to Tailwind's text-sm */
     font-weight: bold; /* This corresponds to Tailwind's font-bold */
-    margin-bottom: 8px; /* This corresponds to Tailwind's mb-2 */
+    margin-bottom: 30px; /* This corresponds to Tailwind's mb-2 */
 }
-.sidebar .h2{
+.sidebar h2{
     margin-bottom:  16px ;
     font-weight: 700;
     font-size: 18px ;
     line-height:28px ;
+   
 }
 
 .sec{
@@ -330,7 +349,7 @@
     margin-bottom: 16px;
 }
 .Nextbtn{
-  background-color: #3b82f6;
+  background-color: hsl(158, 75%, 17%);
   color: #ffffff;
   border-radius: 0.25rem;
   padding-left: 1rem;
@@ -346,7 +365,7 @@
 }
 
 .Nextbtn:hover{
-  background-color: #93c5fd;
+  background-color: hsl(158, 57%, 46%);
 }
 .btn1{ 
    display: flex;
@@ -361,4 +380,21 @@
 .labels1 input select{
   padding: 5px;
   margin-top: 5px;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}
+#file-upload {
+  display: none;
+}
+form {
+  width: 100%;
+}
+li{
+  list-style: none;
 }
