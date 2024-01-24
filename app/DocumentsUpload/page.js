@@ -81,7 +81,7 @@ class FileUploadButton extends React.Component {
         </div>
         <div>
           {/* <p> */}
-          <h3 className="Headers">TERMS AND CONDITIONS</h3>
+          <h3 className="Headers">4.42 DECLARATIONS</h3>
           We, as promoter, hereby confirm below aspects covered in our
           application. Application is eligible for Rejection in case below
           aspects are not adhered to:
@@ -131,7 +131,7 @@ class FileUploadButton extends React.Component {
         {/* Add more  sections as needed */}
 
         <div class="btn1">
-          <Link href="/PaymentPage">
+          <Link href="/AssignProfessional">
             <button class="Nextbtn" type="submit">
               Next
             </button>

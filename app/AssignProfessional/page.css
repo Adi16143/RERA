@@ -1,0 +1,14 @@
+.Forms
+  {
+    width: 100%;
+    align-items: center;
+  }
+  table {
+    margin:  auto;
+    margin-bottom: 20px;
+  }
+  
+  td {
+    text-align: center;
+  }
+  

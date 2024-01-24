@@ -26,41 +26,70 @@ const Paywall = () => {
             <h3 className="Headers">PAYMENT DETAILS </h3>
             <div className="payment-details-container">
               <div>
-                <label for="token-number">6.1 Unique Token Number</label>
+                <label for="token-number">Payment head</label>
                 <input
                   type="text"
                   id="token-number"
-                  value="PXC47V1W04261"
-                  readonly
+                  placeholder="PXC47V1W61"
+                  
                 ></input>
               </div>
               <div class="payment-details-container">
-                <label for="fees">6.2 RERA Total Fees to be Paid*</label>
-                <input type="text" id="fees" value={fee} readonly></input>
+                <label for="fees">GujRERA Unique Token Number</label>
+                <input type="text" id="fees" placeholder={fee} ></input>
+              </div>
+              <div>
+                <label for="token-number">Amount (₹) (A)*</label>
+                <input
+                  type="text"
+                  id="token-number"
+                  placeholder="96,496.35 "
+                 
+                ></input>
+              </div>
+              <div>
+                <label for="token-number">Addl. Amount (₹) (B)*</label>
+                <input
+                  type="number"
+                  id="token-number"
+                  placeholder="0"
+                 
+                ></input>
+              </div>
+              <div>
+                <label for="token-number">Total Amount (₹) (A+B)*</label>
+                <input
+                  type="text"
+                  id="token-number"
+                  placeholder="96,496.35 "
+                 
+                ></input>
               </div>
             </div>
           </div>
           <div className="notice">
             <h3 className="Headers">NOTICE</h3>
             <p>
-              You will be re-directed to Si ePay Payment Gateway from which you
+              1. You will be re-directed to Si ePay Payment Gateway from which you
               can pay this amount using "Net Banking", "Credit Card", "Debit
               Card" options available on ePayment Gateway RA. Total Fees to be
               Paid
               <br />
-              In Corporate Account Net Banking Maker-Checker Scenario, Checker
+              <br></br>
+              2. In Corporate Account Net Banking Maker-Checker Scenario, Checker
               has to ensure to "Check and Approve transaction within 20 minutes
               post initiating the transaction to ensure successful transaction
               Falling to which, the transaction will be treated as Falled. For
               further Inquiry/refund please contact 581 ePay
               <br></br>
+              <br></br>
             </p>
-            <b>REFUND (Scenarios and Process)</b>
+            <b>3. REFUND (Scenarios and Process)</b>
             <br></br>
             <ul>
               <br />
               <li>
-                As stated in detalled T&C, the paid fee does not in any way
+                A. As stated in detalled T&C, the paid fee does not in any way
                 guarantee Issuance of services and the fees paid is not eligible
                 for refund or chargeback in any case.{" "}
               </li>
@@ -68,7 +97,7 @@ const Paywall = () => {
               <ul>
                 <li>
                   {" "}
-                  When a candidate makes double payment by mistake, the refund
+                  B. When a candidate makes double payment by mistake, the refund
                   (part/full) may be considered, as the Authority may decide,
                   subject to The user bring it to the notice of the GUJRERA
                   authority by emall within 7 days of making such payment. Any
@@ -76,12 +105,12 @@ const Paywall = () => {
                 </li>
                 <br />
                 <li>
-                  The email should be sent ayrera@gujarat.gov.in with subject
+                  C. The email should be sent ayrera@gujarat.gov.in with subject
                   line clearly mentioning "Request for Refund words along with
                   other detalls of the transaction.
                 </li>
                 <br />
-                The refund process In case of double payment by mistake only,
+                D. The refund process In case of double payment by mistake only,
                 via the same source of payments made in such cases, will be
                 initiated in 3 to 5 working days after receiving the refund
                 request and due decision about the refund amount is taken by the
@@ -136,7 +165,7 @@ const Paywall = () => {
         </div>
         <div className="subbutns">
           <center>
-            <Link href="/DocumentsUpload">
+            <Link href="/AssignProfessional">
               <button type="button" className="Btn">
                 Previous
               </button>
