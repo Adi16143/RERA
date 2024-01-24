@@ -434,3 +434,33 @@ input::-webkit-inner-spin-button {
     width: 100%;
     align-items: center;
   }
+  .longlabels label{
+    max-width: 400px;
+  }
+  .flex{
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+  
+  }
+  .flex input{
+    width:min-content;
+  }
+  .yesnoinput {
+    width: 50%;
+    height: 25px;
+    border-radius: 3px;
+    border: solid rgb(214, 212, 209) 1px;
+    padding: 10px;
+  
+  }
+  .clabels{
+    display: flex;
+    justify-content: flex-start;
+  
+  }
+  .radioflex{
+    display: flex;
+    align-items:center ;
+    gap: 10px;
+  }

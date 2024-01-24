@@ -123,7 +123,7 @@ const Paywall = () => {
             </ul>
           </div>
         </div>
-        <div className="tac">
+        <div class="tac">
           <h3 className="Headers">TERMS AND CONDITIONS</h3>
           {/* <p> */}
           <ul>

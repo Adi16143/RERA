@@ -47,9 +47,9 @@ const Input = ({ label }) => (
     <div class="Input">
       <label class="label">{label}</label>
       <label htmlFor="file-upload" className="custom-file-upload">
-        <i className="fa fa-cloud-upload" class="maininput"></i> File Upload
+        <i className="fa fa-cloud-upload" ></i> File Upload
       </label>
-      <input id="file-upload" class="maininput" type="file" />
+      <input id="file-upload" type="file" />
     </div>
   </>
 );
@@ -79,6 +79,7 @@ class FileUploadButton extends React.Component {
             />
           </div>
         </div>
+
         <div>
           {/* <p> */}
           <h3 className="Headers">4.42 DECLARATIONS</h3>
@@ -131,7 +132,7 @@ class FileUploadButton extends React.Component {
         {/* Add more  sections as needed */}
 
         <div class="btn1">
-          <Link href="/AssignProfessional">
+          <Link href="/BlockEntry">
             <button class="Nextbtn" type="submit">
               Next
             </button>

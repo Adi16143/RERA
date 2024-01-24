@@ -6,3 +6,6 @@ input{
     color: orange;
     background-color: white;
 }
+form{
+    border: 1px rgb(223, 48, 48);
+}

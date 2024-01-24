@@ -106,7 +106,7 @@ const Form1 = () => (
      */}
     </div>
     <div>
-      <section>
+      {/* <section>
         <h2 class="heading1">OTHER INTERNAL DEVELOPMENT WORK</h2>
         <h2 class="heading1">WATER SUPPLY</h2>
         <div class="projectdetails">
@@ -141,8 +141,60 @@ const Form1 = () => (
             Other
           </div>
         </div>
+      </section> */}
+      <section>
+        <h2 class="heading1">OTHER INTERNAL DEVELOPMENT WORK</h2>
+        <h2 class="heading1">WATER SUPPLY</h2>
+        <div class="projectdetails">
+          <div class="longlabels clabels select">
+            <label>
+              2.14 Whether Drinking Water is to be obtained from Municipal/Local
+              Authority Pipe Line
+            </label>
+            <select class="yesnoinput">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <div class="flex longlabels clabels">
+            <label>
+              (a)Total quantity of drinking water required for the project as
+              per NBC:
+            </label>
+            <Input label=" Residencial" type="number" />
+            <Input label=" Commercial" type="number" />
+            <Input label=" Total" type="text" />
+          </div>
+
+          <div class="flex longlabels clabels">
+            <label>
+              (b)Total quantity of drinking water proposed to be provided for
+              the project:
+            </label>
+            <Input type="number" />
+            <Input type="number" />
+            <Input type="text" />
+          </div>
+
+          <div class="oneflex longlabels clabels">
+            <label>(c)Total water proposed to be provided as % of (a):</label>
+            <Input type="text" />
+          </div>
+
+          <div class="radioinput">
+            <label class="openlabel"> (d) Water to be supplied from:</label>
+            <div class="radioflex">
+              <input type="radio" placeholder="" name="tparea" />
+              Borewell at Project Site
+              <input type="radio" placeholder="" name="tparea" />
+              Tankers
+              <input type="radio" placeholder="" name="tparea" />
+              Other
+            </div>
+          </div>
+        </div>
       </section>
-      <h2 class="heading3">SEWARAGE DISPOSAL</h2>
+      {/* <h2 class="heading3">SEWARAGE DISPOSAL</h2>
       <section className="bankDetail">
         <div class="projectdetails">
           <label class="label1">
@@ -186,6 +238,56 @@ const Form1 = () => (
           </label>
         </div>
 
+        
+      </section> */}
+      <h2 class="heading1">SEWARAGE DISPOSAL</h2>
+      <section className="s">
+        <div class="projectdetails">
+          <div class="clabels longlabels select">
+            <label class="label1">
+              2.15 Whether sewerage pipe line of Municipal/local authority is
+              available near by the project site to which sewerage line of
+              project can be connected?
+            </label>
+            <select name="sewaragedisposal">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+
+          <div class="flex longlabels clabels">
+            <label>
+              (a) Quantity of sewerage which is expected to generate from the
+              project as per NBC:
+            </label>
+            <Input label=" Residencial" type="number" />
+            <Input label=" Commercial" type="number" />
+            <Input label=" Total" type="text" />
+          </div>
+
+          <div class="radioinput gap">
+            <label class="openlabel">
+              (b)How sewerage of the project will be treated?:
+            </label>
+            <div class="radioflex gap">
+              <input type="radio" placeholder="" name="tparea" />
+              Borewell at Project Site
+              <input type="radio" placeholder="" name="tparea" />
+              Tankers
+              <input type="radio" placeholder="" name="tparea" />
+              Other
+            </div>
+          </div>
+
+          <div class=" flex select">
+            <label>(c)Whether recycling of treated effluent is proposed</label>
+            <select name="recyclingProposed">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+        </div>
+
         {/* Add more input fields as needed */}
       </section>
 
@@ -202,6 +304,8 @@ const Form1 = () => (
           Other
         </div>
       </section>
+      <br></br>
+      <br></br>
       <h2 class="heading3">SWIMMING POOL</h2>
       <section className="bankDetail">
         <div class="projectdetails">

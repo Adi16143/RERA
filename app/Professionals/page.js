@@ -48,9 +48,10 @@ const MyForm = () => {
        
       <form className="my-form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label className='labels'>
+          <label >
             PAN No :<br></br>
             <input 
+              className="inputs"
               type="text"
               name="panNo"
               value={formData.panNo}
@@ -199,7 +200,7 @@ const MyForm = () => {
           <div className="form-group">
           <label>
             CoA Number :<br></br>
-            <input type="text" name="coaNumber" value={formData.coaNumber} onChange={handleChange}
+            <input type="text" className="inputs" name="coaNumber" value={formData.coaNumber} onChange={handleChange}
             required />
             <button className="submit-button">Search</button>
           </label>
@@ -233,7 +234,7 @@ const MyForm = () => {
           <div className="form-group">
           <label>
             No of Key Project Completed :<br></br>
-            <input type="text" name="noOfKeyProjectsCompleted" value={formData.noOfKeyProjectsCompleted} onChange={handleChange} />
+            <input className="inputs" type="text" name="noOfKeyProjectsCompleted" value={formData.noOfKeyProjectsCompleted} onChange={handleChange} />
           </label>
           <label>
             Professional Exp. in Yrs. :<br></br>
@@ -316,7 +317,7 @@ const MyForm = () => {
           <div className="form-group">
           <label>
             PAN No. :<br></br>
-            <input type="text" name="panNumber" value={formData.panNumber} onChange={handleChange}
+            <input type="text" className="inputs" name="panNumber" value={formData.panNumber} onChange={handleChange}
             required />
             <button className="submit-button">Search</button>
           </label>
@@ -358,7 +359,7 @@ const MyForm = () => {
           
           <label>
             No of Key Project Completed :<br></br>
-            <input type="text" name="noOfKeyProjectsCompleted" value={formData.noOfKeyProjectsCompleted} onChange={handleChange} />
+            <input type="text" className="inputs" name="noOfKeyProjectsCompleted" value={formData.noOfKeyProjectsCompleted} onChange={handleChange} />
           </label>
           <label>
             Professional Experience in Yrs. :<br></br>
@@ -436,7 +437,7 @@ const MyForm = () => {
           <div className="form-group">
           <label>
             PAN Number :<br></br>
-            <input type="text" name="panNumber" value={formData.panNumber} onChange={handleChange}
+            <input type="text" className="inputs" name="panNumber" value={formData.panNumber} onChange={handleChange}
             required />
             <button className="submit-button">Search</button>
           </label>
@@ -475,7 +476,7 @@ const MyForm = () => {
   
           <label>
             No of Key Project Completed :<br></br>
-            <input type="text" name="noOfKeyProjectsCompleted" value={formData.noOfKeyProjectsCompleted} onChange={handleChange} />
+            <input type="text" className="inputs" name="noOfKeyProjectsCompleted" value={formData.noOfKeyProjectsCompleted} onChange={handleChange} />
           </label>
           <label>
             Professional Experience in Yrs. :<br></br>
