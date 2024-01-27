@@ -70,7 +70,7 @@ function BlockEntry() {
         <div class="projectdetails">
           <div class="labels">
             <div class="Input">
-              <label class="label">"4.1 Block Name*"</label>
+              <label class="label">4.1 Block Name*</label>
               <input
                 class="maininput"
                 type="text"
@@ -79,7 +79,7 @@ function BlockEntry() {
               />
             </div>
             <div class="Input">
-              <label class="label">"4.2 Development Start Date*"</label>
+              <label class="label">4.2 Development Start Date*</label>
               <input
                 class="maininput"
                 type="date"
@@ -88,7 +88,7 @@ function BlockEntry() {
               />
             </div>
             <div class="Input">
-              <label class="label">"4.3 Development End Date*"</label>
+              <label class="label">4.3 Development End Date*</label>
               <input
                 class="maininput"
                 type="date"
@@ -100,12 +100,12 @@ function BlockEntry() {
           
           <div class="labels">
             <div class="Input">
-              <label class="label">"4.4 Commencement Certificate*"</label>
+              <label class="label">4.4 Commencement Certificate*</label>
               <input class="maininput" type="file" id="file" />
             </div>
             <div class="Input">
               <label class="label">
-                "4.5 Date on Commencement Certificate *"
+                4.5 Date on Commencement Certificate *
               </label>
               <input
                 class="maininput"
@@ -115,22 +115,22 @@ function BlockEntry() {
               />
             </div>
             <div class="Input">
-              <label class="label">"4.6 Commencement Certificate No*"</label>
+              <label class="label">4.6 Commencement Certificate No*</label>
               <input type="number" id="ccNo" placeholder=" " />
             </div>
           </div>
           <div class="labels">
             <div class="Input">
-              <label class="label">"4.7 Height (In Meter)*"</label>
+              <label class="label">4.7 Height (In Meter)*</label>
               <input type="number" id="height" placeholder=" " />
             </div>
             <div class="Input">
-              <label class="label">"4.8 FSI of Block(In Sq Meter) *"</label>
+              <label class="label">4.8 FSI of Block(In Sq Meter) *</label>
               <input type="number" id="fsi" placeholder=" " />
             </div>
             <div class="Input">
               <label class="label">
-                "4.9 Built-up Area of BLock(In Sq Meter) *"
+                4.9 Built-up Area of BLock(In Sq Meter) *
               </label>
               <input type="number" id="bArea" placeholder=" " />
             </div>

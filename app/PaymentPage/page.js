@@ -5,6 +5,12 @@ import "./pay.css";
 import Link from "next/link";
 
 const Input = () => <input type="checkbox" class="input2"></input>;
+const Input2 = ({ label, placeholder, type }) => (
+  <div class="li">
+    <label>{label}</label>
+    <input type={type} placeholder={placeholder} />
+  </div>
+);
 
 const Paywall = () => {
   //     let navigate = useNavigate();
@@ -23,50 +29,17 @@ const Paywall = () => {
         </div>
         <div className="sub-container">
           <div className="payment-details">
-            <h3 className="Headers">PAYMENT DETAILS </h3>
-            <div className="payment-details-container">
-              <div>
-                <label for="token-number">Payment head</label>
-                <input
-                  type="text"
-                  id="token-number"
-                  placeholder="PXC47V1W61"
-                  
-                ></input>
-              </div>
-              <div class="payment-details-container">
-                <label for="fees">GujRERA Unique Token Number</label>
-                <input type="text" id="fees" placeholder={fee} ></input>
-              </div>
-              <div>
-                <label for="token-number">Amount (₹) (A)*</label>
-                <input
-                  type="text"
-                  id="token-number"
-                  placeholder="96,496.35 "
-                 
-                ></input>
-              </div>
-              <div>
-                <label for="token-number">Addl. Amount (₹) (B)*</label>
-                <input
-                  type="number"
-                  id="token-number"
-                  placeholder="0"
-                 
-                ></input>
-              </div>
-              <div>
-                <label for="token-number">Total Amount (₹) (A+B)*</label>
-                <input
-                  type="text"
-                  id="token-number"
-                  placeholder="96,496.35 "
-                 
-                ></input>
-              </div>
+            <h3 className='Headers'>PAYMENT DETAILS</h3>
+            <div className="mainpay">
+              <Input2 label="Payment head"/>
+              <Input2 label="GujRERA Unique Token Number"/>
+              <Input2 label="Amount(Rs)(A)*"/>
+              <Input2 label="Addl. Amount(Rs)(B)*"/>
+              <Input2 label="Total Amount(Rs)(A+B)*"/>
             </div>
-          </div>
+          </div>  
+
+
           <div className="notice">
             <h3 className="Headers">NOTICE</h3>
             <p>
@@ -170,7 +143,7 @@ const Paywall = () => {
                 Previous
               </button>
             </Link>
-            <Link href="#">
+            <Link href="/End">
               <button type="submit" className="Btn">
                 Agree and pay {fee}
               </button>
