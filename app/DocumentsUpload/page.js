@@ -53,6 +53,12 @@ const Input = ({ label }) => (
     </div>
   </>
 );
+const Input2 = ({ label, placeholder, type }) => (
+  <div class="li">
+    <label>{label}</label>
+    <input type={type} placeholder={placeholder} />
+  </div>
+);
 
 class FileUploadButton extends React.Component {
   render() {
@@ -79,6 +85,45 @@ class FileUploadButton extends React.Component {
             />
           </div>
         </div>
+        <div class="box">
+            <div class="boxhead">
+              <h2 class="boxheading">LEGAL DOCUMENTS</h2>
+            </div>
+
+            <div class="boxele">
+              <div>
+                <h5 class="Headers">
+                  Land Documents/Ownership documents/Conveyance Deed*
+                </h5>
+                <h5>
+                  (Registered Purchase/sale Deed with index copy, Registered
+                  Gift Deed with index copy,Will,Registered Release Deed with
+                  index copy)
+                </h5>
+              </div>
+              <div class="onlyflex mar">
+                <input type = "text" id = "search" />
+                <button class="grnbtn">Search</button>
+              </div>
+              <div class="flex">
+                <div class="mar">
+                  <Input2
+                    label="4.9 Date of Issuance of documents"
+                    type="date"
+                  />
+                </div>
+                <div class="mar"> 
+                  <Input2 label="4.10 Land Owner Name" placeholder="NG GROUP FINANCIAL SERVICE"/>
+                </div>
+                <div class="mar">
+                  <Input2 type="tel" label="4.11 Contact Details" placeholder="9908663427"/>
+                </div>
+                <div class="docin mar">
+                  <Input label="4.12 Document*"/>
+                </div>
+              </div>
+            </div>
+          </div>
 
         <div>
           {/* <p> */}
