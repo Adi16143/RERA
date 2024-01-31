@@ -52,7 +52,11 @@
   }
   
   header{
-    background-color: rgb(72, 123, 175);
+    background-image: url(https://t4.ftcdn.net/jpg/00/47/49/01/360_F_47490128_JLClMTbZyVdxl3OW2m8H4vJHW7hDZ8Jj.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
   }
   
   
@@ -304,7 +308,7 @@
     .container {
         width: 100%;
     }
-    @media (min-width: 640px) {
+    /* @media (min-width: 640px) {
         .container {
             max-width: 640px;
         }
@@ -312,8 +316,9 @@
     @media (min-width: 768px) {
         .container {
             max-width: 768px;
+            width: 100%;
         }
-    }
+    } */
     margin-left: auto;
   margin-right: auto;
   padding-left: 16px;
@@ -474,4 +479,19 @@ input::-webkit-inner-spin-button {
     display: flex;
     align-items:center ;
     gap: 10px;
+    margin-left: 20px;
+  }
+
+  .sewaragedisposal{
+    width: 30%;
+    height: 25px;
+    margin-left: 12%;
+  }
+  .bankDetail{
+    margin-top: 10px;
+  }
+  .recyclingProposed{
+    width: 30%;
+    height: 25px;
+    margin-right: 26%;
   }

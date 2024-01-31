@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Sidebar from '../Components/Sidebar'
 const Input = ({ label, placeholder }) => (
   <div class="Input">
     <label class="labels1">{label}</label>
@@ -249,7 +250,7 @@ const Form1 = () => (
               available near by the project site to which sewerage line of
               project can be connected?
             </label>
-            <select name="sewaragedisposal">
+            <select class ="sewaragedisposal">
               <option value="No">No</option>
               <option value="Yes">Yes</option>
             </select>
@@ -281,7 +282,7 @@ const Form1 = () => (
 
           <div class=" flex select">
             <label>(c)Whether recycling of treated effluent is proposed</label>
-            <select name="recyclingProposed">
+            <select class ="recyclingProposed">
               <option value="No">No</option>
               <option value="Yes">Yes</option>
             </select>
@@ -311,7 +312,7 @@ const Form1 = () => (
         <div class="projectdetails">
           <label>
             2.17 Swimming pool capacity (For Project cost &gt; 100 crores)
-            <select name="seweragePipeLine">
+            <select class ="sewaragedisposal">
               <option value="No">No</option>
               <option value="Yes">Yes</option>
             </select>
@@ -330,13 +331,34 @@ const Form1 = () => (
       {/* Add more  sections as needed */}
 
       <div class="btn1">
+      <Link href="/Professionals">
         <button class="Nextbtn" type="submit">
-          <Link href="/Professionals"> Next</Link>
+           Next
         </button>
+        </Link>
       </div>
     </div>
     {/* Add more input fields or other form elements as needed */}
   </form>
 );
+const App = () => (
+  <div class="app">
+    {/* <Main />
+    <Header /> */}
+    <div class = "main">
+      <div class = "side">
+      <Sidebar /></div>
+      <div class = "form">
+      <Form1 />
+      </div>
+    </div>
+    {/* <Form /> */}
+    {/* <Form1 /> */}
+  </div>
+);
 
-export default Form1;
+
+
+
+export default App;
+

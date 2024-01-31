@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import "./style.css";
+import Sidebar from "../Components/Sidebar";
 
 function BlockEntry() {
   const [blockData, setBlockData] = useState([]);
@@ -72,7 +73,7 @@ function BlockEntry() {
             <div class="Input">
               <label class="label">4.1 Block Name*</label>
               <input
-                class="maininput"
+                
                 type="text"
                 id="blockName"
                 placeholder=" "
@@ -81,7 +82,7 @@ function BlockEntry() {
             <div class="Input">
               <label class="label">4.2 Development Start Date*</label>
               <input
-                class="maininput"
+                
                 type="date"
                 id="sDate"
                 placeholder="dd-mm-yyyy"
@@ -90,7 +91,7 @@ function BlockEntry() {
             <div class="Input">
               <label class="label">4.3 Development End Date*</label>
               <input
-                class="maininput"
+                
                 type="date"
                 id="eDate"
                 placeholder="dd-mm-yyyy"
@@ -101,14 +102,14 @@ function BlockEntry() {
           <div class="labels">
             <div class="Input">
               <label class="label">4.4 Commencement Certificate*</label>
-              <input class="maininput" type="file" id="file" />
+              <input  type="file" id="file" />
             </div>
             <div class="Input">
               <label class="label">
                 4.5 Date on Commencement Certificate *
               </label>
               <input
-                class="maininput"
+                
                 id="ccDate"
                 type="date"
                 placeholder="dd-mm-yyyy"
@@ -152,7 +153,7 @@ function BlockEntry() {
 const Input = ({ label, placeholder }) => (
   <div class="Input">
     <label class="label">{label}</label>
-    <input class="maininput" type="text" placeholder={placeholder} />
+    <input  type="text" placeholder={placeholder} />
   </div>
 );
 const Input1 = ({ label }) => (
@@ -167,4 +168,25 @@ const Input1 = ({ label }) => (
   </>
 );
 
-export default BlockEntry;
+const App = () => (
+  <div class="app">
+    {/* <Main />
+    <Header /> */}
+    <div class = "main">
+      <div class = "side">
+      <Sidebar /></div>
+      <div class = "form">
+      <BlockEntry />
+      </div>
+    </div>
+    {/* <Form /> */}
+    {/* <Form1 /> */}
+  </div>
+);
+
+
+
+
+export default App;
+
+

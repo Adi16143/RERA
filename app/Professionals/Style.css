@@ -29,8 +29,9 @@
   }
   
   label {
-    width: 400px; /* Set a fixed width for labels */
+    width: 330px; /* Set a fixed width for labels */
     padding-right: 5%;
+    margin-top: 10px;
   }
   input{
     height:25px;
