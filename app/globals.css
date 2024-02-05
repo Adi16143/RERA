@@ -495,3 +495,14 @@ input::-webkit-inner-spin-button {
     height: 25px;
     margin-right: 26%;
   }
+
+  .add-button1 {
+    opacity: 0.4;
+    height: 80%;
+    width: 80px; 
+    margin-top: 4px;
+    background-color: hsl(158, 75%, 17%);
+    border-radius: 10%;
+    color: white;
+    
+  }

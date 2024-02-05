@@ -25,15 +25,15 @@ import Main from '../Components/Main';
   const DevelopD = () => (
     <div class="app">
       {/* <Main />
-      <Header />
+      <Header /> */}
       <div class = "main">
         <div class = "side">
         <Sidebar /></div>
         <div class = "form1">
         <Form1 />
         </div>
-      </div> */}
-      <Form1 />
+      </div>
+      {/* <Form1 /> */}
     </div>
   );
   

@@ -362,7 +362,7 @@ const App = () => (
       <div class = "side">
       <Sidebar /></div>
       <div class = "form">
-      <Form />
+      <Form/>
       </div>
     </div>
     {/* <Form /> */}

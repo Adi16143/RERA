@@ -1,28 +1,85 @@
-import React from "react";
+import React, { useState } from 'react';
 // import Form1 from "./DevelopmentDetails";
 import Link from "next/link";
+
 const Input = ({ label, placeholder, type }) => (
   <div class="Input">
     <label class="label">{label}</label>
     <input class="maininput" type={type} placeholder={placeholder} />
   </div>
 );
-const Form = () => (
-  <form>
+
+const Form = () => 
+{
+   
+  const { PrismaClient } = require("@prisma/client");
+
+  const prisma = new PrismaClient();
+  
+  const [formData, setFormData] = useState([]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e) =>{
+    e.preventDefault();
+  
+    
+  
+    // Create an object with the form data
+    const obj = {
+      Proj_name: e.target.Proj_name.value,
+      Proj_type: e.target.Proj_type.value,
+      Proj_desc: e.target.Proj_desc.value,
+      Proj_Sdate: e.target.Proj_Sdate.value,
+      Proj_Edate: e.target.Proj_Edate.value,
+    };
+  
+    // Update the formData state using the spread operator
+    setFormData((prevData) => [...prevData, obj]);
+    async function main() {
+      await prisma.project_details.create({
+        data: {
+          project_name: Proj_name.value,
+          project_type: Proj_type.value,
+          project_desc: Proj_desc.value,
+          project_sdate: Proj_Sdate.value,
+          project_edate: Proj_Edate.value
+         
+        }
+      })
+    }
+      main()
+      .then(async () => {
+        await prisma.$disconnect();
+      })
+      .catch(async (e) => {
+        console.error(e);
+        await prisma.$disconnect();
+        process.exit(1);
+      });
+  
+
+    };
+  
+  return(
+  <form onSubmit={handleSubmit}>
     <h2 class="heading1">PROJECT DETAIL</h2>
     <div class="projectdetails">
       <div class="labels">
         <div class="Input">
           <label class="label">1.1 Project Name*</label>
-          <input class="maininput" type="text" placeholder="Kunj Vani Villa"/>
+          <input class="maininput" type="text" id = "Proj_name" placeholder="Kunj Vani Villa"/>
         </div>
         <div class="Input">
           <label class="label">1.2 Project Type*</label>
-          <input class="maininput" type="text" placeholder="Residential"/>
+          <input class="maininput" type="text" id = "Proj_type" placeholder="Residential"/>
         </div>      
         <div class="Input">
           <label class="label">1.3 Project Description*</label>
-          <input class="maininput" type="text" placeholder="Flat with all facilities..."/>
+          <input class="maininput" type="text" id = "Proj_desc" placeholder="Flat with all facilities..."/>
         </div>    
       </div>
       <div class="bigdiv">
@@ -35,11 +92,11 @@ const Form = () => (
       <div class="labels">
       <div class="Input">
           <label class="label">1.5 Project Start Date*</label>
-          <input class="maininput" type="date" placeholder="05/04/2020"/>
+          <input class="maininput" type="date" id = "Proj_Sdate" placeholder="05/04/2020"/>
         </div>    
         <div class="Input">
           <label class="label">1.6 Project End Date*</label>
-          <input class="maininput" type="date" placeholder="31/01/2024"/>
+          <input class="maininput" type="date" id = "Proj_Edate" placeholder="31/01/2024"/>
         </div>    
         <div class="Input">
           <label class="label">1.7 Total Land Area of Approved layout(Sq Mtrs.)*</label>
@@ -156,6 +213,10 @@ const Form = () => (
       <div class="Input">
           <label class="label">1.28 Project Address Line 1*</label>
           <input class="maininput" type="text" placeholder="Vastrapur Road"/>
+        </div>
+        <div class="Input">
+          <label class="label">1.29 Project Address Line 2*</label>
+          <input class="maininput" type="text" placeholder=""/>
         </div>
 
       </div>
@@ -288,14 +349,18 @@ const Form = () => (
         </div>
           
         </div>
+        <div class="labels">
         <div class="Input">
           <label class="label">1.53 RERA Bank Account Statement or First Page of Passbook</label>
           <input class="maininput" type="text" placeholder="mojlo/abc"/>
         </div>
-
+        <button type="submit" className="add-button1">
+          Add
+        </button>
+        </div>
         {/* Add more input fields as needed */}
       </section>
-
+      
       {/* Add more  sections as needed */}
 
       <div class="btn1">
@@ -306,7 +371,13 @@ const Form = () => (
         </Link>
       </div>
     </div>
+   
     {/* Add more input fields or other form elements as needed */}
   </form>
-);
+  );
+ 
+  }
+
+
+
 export default Form;

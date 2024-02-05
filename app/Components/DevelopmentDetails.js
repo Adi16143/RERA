@@ -341,24 +341,24 @@ const Form1 = () => (
     {/* Add more input fields or other form elements as needed */}
   </form>
 );
-const App = () => (
-  <div class="app">
-    {/* <Main />
-    <Header /> */}
-    <div class = "main">
-      <div class = "side">
-      <Sidebar /></div>
-      <div class = "form">
-      <Form1 />
-      </div>
-    </div>
-    {/* <Form /> */}
-    {/* <Form1 /> */}
-  </div>
-);
+// const App = () => (
+//   <div class="app">
+//     {/* <Main />
+//     <Header /> */}
+//     <div class = "main">
+//       <div class = "side">
+//       <Sidebar /></div>
+//       <div class = "form">
+//       <Form1 />
+//       </div>
+//     </div>
+//     {/* <Form /> */}
+//     {/* <Form1 /> */}
+//   </div>
+// );
 
 
 
 
-export default App;
+export default Form1;
 
