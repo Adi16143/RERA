@@ -52,7 +52,10 @@
   }
   
   header{
-    background-color: rgb(72, 123, 175);
+    background-image: url(https://t4.ftcdn.net/jpg/00/47/49/01/360_F_47490128_JLClMTbZyVdxl3OW2m8H4vJHW7hDZ8Jj.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   
   
@@ -103,9 +106,8 @@
   
   .main{
     display: flex;
-    gap: 22px;
-    margin-left: 6px;
-    margin-right: 6px;
+    width: 100vw;
+    gap: 10px;
   }
   
   .heading2{
@@ -233,7 +235,7 @@
 }
 
 .form{
-    width : 80%;
+    width :70%;
     display : flex;
     flex-direction: row;
 
@@ -302,7 +304,7 @@
   }
   .app{
     .container {
-        width: 100%;
+        width: inherit;
     }
     @media (min-width: 640px) {
         .container {
