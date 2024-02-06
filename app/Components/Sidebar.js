@@ -1,10 +1,15 @@
 import Link from "next/link";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2117fba3306cd16612f1beb00defd86d2e7ecff3
 
 // Sidebar component
 const Sidebar = () => (
     <div class ="sidebar">
-      <h2 class="head2">Navigation</h2>
+      
       <nav>
+<<<<<<< HEAD
         <Link href="./" class="link1">Project Detail</Link>
         <Link href="./DevelopD" class="link1">Development Detail</Link>
         <Link href="./Professionals" class="link1">Add Professional</Link>
@@ -13,6 +18,16 @@ const Sidebar = () => (
         <Link href="./AssignProfessional" class="link1">Assign Professionals</Link>
         <Link href="#" class="link1">Perform Certification</Link>
         <Link href="PaymentPage" class="link1">Payment Page</Link>
+=======
+        <Link href="/" class="link1">Project Detail</Link >
+        <Link href="/DevelopD" class="link1">Development Detail</Link >
+        <Link href="Professionals" class="link1">Add Professional</Link >
+        <Link href="/DocumentsUpload" class="link1">Upload Document</Link >
+        <Link href="/BlockEntry" class="link1">Block Entry</Link >
+        <Link href="/AssignProfessional" class="link1">Assign Professionals</Link >
+        <Link href="#" class="link1">Perform Certification</Link >
+        <Link href="/PaymentPage" class="link1">Payment Page</Link >
+>>>>>>> 2117fba3306cd16612f1beb00defd86d2e7ecff3
         {/* Add more navigation links as needed */}
       </nav>
     </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Sidebar from "../Components/Sidebar";
 import "./page.css"
 const AssignProfessional = () => (
     <div className="forms">
@@ -124,15 +125,15 @@ const AssignProfessional = () => (
 const App = () => (
     <div class = "Forms">
       {/* <Main />
-      <Header />
+      <Header /> */}
       <div class = "main">
         <div class = "side">
         <Sidebar /></div>
         <div class = "form">
-        <Form />
+        <AssignProfessional/>
         </div>
-      </div> */}
-      <AssignProfessional/>
+      </div>
+      
       {/* <Form1 /> */}
     </div>
   );

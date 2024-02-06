@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 import "./pay.css";
 import Link from "next/link";
+import Sidebar from "../Components/Sidebar";
 
 const Input = () => <input type="checkbox" class="input2"></input>;
 const Input2 = ({ label, placeholder, type }) => (
@@ -18,8 +19,9 @@ const Paywall = () => {
   //     let path = `/Confirm`;
   //     navigate(path);
   //   }
-
-  const fee = 22400;
+  
+  const [fee, setfee] = useState("")
+  
   return (
     <div>
       <h1>PAYMENT</h1>
@@ -31,11 +33,19 @@ const Paywall = () => {
           <div className="payment-details">
             <h3 className='Headers'>PAYMENT DETAILS</h3>
             <div className="mainpay">
-              <Input2 label="Payment head"/>
+              <Input2 label="Payment head" />
               <Input2 label="GujRERA Unique Token Number"/>
-              <Input2 label="Amount(Rs)(A)*"/>
-              <Input2 label="Addl. Amount(Rs)(B)*"/>
-              <Input2 label="Total Amount(Rs)(A+B)*"/>
+              <Input2 label="Amount(Rs)(A)* " type = "number" value = {fee}
+              onChange = { (e)=>{
+                setfee(e.target.fee)
+
+              }
+
+              }
+              
+              placeholder = "22400"/>
+              <Input2 label="Addl. Amount(Rs)(B)*" type = "number" placeholder="0"/>
+              <Input2 label="Total Amount(Rs)(A+B)*" type = "number" placeholder="22400"/>
             </div>
           </div>  
 
@@ -155,4 +165,25 @@ const Paywall = () => {
   );
 };
 
-export default Paywall;
+
+const App = () => (
+  <div class="app">
+    {/* <Main />
+    <Header /> */}
+    <div class = "main">
+      <div class = "side">
+      <Sidebar /></div>
+      <div class = "form">
+      <Paywall />
+      </div>
+    </div>
+    {/* <Form /> */}
+    {/* <Form1 /> */}
+  </div>
+);
+
+
+
+
+export default App;
+

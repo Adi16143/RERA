@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import "./Style.css";
+import Sidebar from "../Components/Sidebar";
 // import React, { useState } from 'react';
 
 // const FileUpload = ({ label }) => {
@@ -190,4 +191,24 @@ class FileUploadButton extends React.Component {
   }
 }
 
-export default FileUploadButton;
+const App = () => (
+  <div class="app">
+    {/* <Main />
+    <Header /> */}
+    <div class = "main">
+      <div class = "side">
+      <Sidebar /></div>
+      <div class = "form">
+      <FileUploadButton />
+      </div>
+    </div>
+    {/* <Form /> */}
+    {/* <Form1 /> */}
+  </div>
+);
+
+
+
+
+export default App;
+

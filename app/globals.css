@@ -56,6 +56,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-bottom: 10px;
   }
   
   
@@ -306,7 +307,7 @@
     .container {
         width: inherit;
     }
-    @media (min-width: 640px) {
+    /* @media (min-width: 640px) {
         .container {
             max-width: 640px;
         }
@@ -314,8 +315,9 @@
     @media (min-width: 768px) {
         .container {
             max-width: 768px;
+            width: 100%;
         }
-    }
+    } */
     margin-left: auto;
   margin-right: auto;
   padding-left: 16px;
@@ -476,4 +478,30 @@ input::-webkit-inner-spin-button {
     display: flex;
     align-items:center ;
     gap: 10px;
+    margin-left: 20px;
+  }
+
+  .sewaragedisposal{
+    width: 30%;
+    height: 25px;
+    margin-left: 12%;
+  }
+  .bankDetail{
+    margin-top: 10px;
+  }
+  .recyclingProposed{
+    width: 30%;
+    height: 25px;
+    margin-right: 26%;
+  }
+
+  .add-button1 {
+    opacity: 0.4;
+    height: 80%;
+    width: 80px; 
+    margin-top: 4px;
+    background-color: hsl(158, 75%, 17%);
+    border-radius: 10%;
+    color: white;
+    
   }

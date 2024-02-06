@@ -357,15 +357,15 @@ const Input = ({ label, placeholder }) => (
 const App = () => (
   <div class="app">
     {/* <Main />
-    <Header />
+    <Header /> */}
     <div class = "main">
       <div class = "side">
       <Sidebar /></div>
       <div class = "form">
-      <Form />
+      <Form/>
       </div>
-    </div> */}
-    <Form />
+    </div>
+    {/* <Form /> */}
     {/* <Form1 /> */}
   </div>
 );

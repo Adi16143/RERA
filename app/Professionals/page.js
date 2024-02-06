@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import './Style.css';
+import Sidebar from '../Components/Sidebar'
 function AddProfessionals(){
     return(
         <div class = "professional">
@@ -503,4 +504,24 @@ const MyForm = () => {
         </div>
     );
   };
-  export default AddProfessionals;
+  const App = () => (
+    <div class="app">
+      {/* <Main />
+      <Header /> */}
+      <div class = "main">
+        <div class = "side">
+        <Sidebar /></div>
+        <div class = "form">
+        <AddProfessionals />
+        </div>
+      </div>
+      {/* <Form /> */}
+      {/* <Form1 /> */}
+    </div>
+  );
+  
+  
+  
+  
+  export default App;
+  

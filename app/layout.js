@@ -17,13 +17,13 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         < Main />
         <Header />
-        <div class = "main">
+        {/* <div class = "main">
       <div class = "side">
       <Sidebar /></div>
-      <div class = "form">
+      <div class = "form"> */}
       {children}
-      </div>
-    </div>
+      {/* </div>
+    </div> */}
         
         </body>
     </html>

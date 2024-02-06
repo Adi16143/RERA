@@ -15,4 +15,6 @@
     border-collapse:collapse;
     width: 90%;
   }
-  
+  button{
+    margin-right: 3px;
+  }
