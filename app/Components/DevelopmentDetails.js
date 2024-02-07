@@ -5,23 +5,26 @@ import { PrismaClient } from "@prisma/client";
 import Link from "next/link";
 const prisma = new PrismaClient();
 
-const Input = ({ label, placeholder }) => (
+const Input = ({ label, placeholder,type='text',onChange }) => (
   <div class="Input">
     <label class="labels1">{label}</label>
-    <input class="maininput" type="text" placeholder={placeholder} />
+    <input class="maininput" type={type} placeholder={placeholder} 
+    onChange={e=>onChange(e.target.value)}
+    />
   </div>
 );
 
 const Form1 = () => {
   const router = useRouter();
   const [Type_of_inventory, setType_of_inventory] = useState("");
-  const [No_of_inventory, setNo_of_inventory] = useState("");
-  const [Carpet_area, setCarpet_area] = useState("");
+  const [No_of_inventory, setNo_of_inventory] = useState(0);
+  const [Carpet_area, setCarpet_area] = useState(0);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const body = { Type_of_inventory, No_of_inventory, Carpet_area };
+      const body = { Type_of_inventory, No_of_inventory:parseInt(No_of_inventory), Carpet_area:parseInt(Carpet_area) };
+      console.log(body)
       fetch("/api/post", {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
@@ -30,13 +33,12 @@ const Form1 = () => {
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
-          router.push("/drafts");
+          router.push("/");
         });
     } catch (error) {
       console.error(error);
     }
-
-    router.push("/");
+    
   };
 
   return (
@@ -53,23 +55,25 @@ const Form1 = () => {
           <Input
             name="Type_of_inventory"
             value={Type_of_inventory}
-            onChange={(event) => setType_of_inventory(event.target.value)}
+            onChange={setType_of_inventory}
             label="2.1 Type of Inventory"
             placeholder="Shop"
           />
           <Input
             name="No_of_inventory"
             value={No_of_inventory}
-            onChange={(event) => setNo_of_inventory(event.target.value)}
+            onChange={setNo_of_inventory}
             label="2.2 No of Inventory"
             placeholder="10"
+            type='number'
           />
           <Input
             name="Carpet_area"
             value={Carpet_area}
-            onChange={(event) => setCarpet_area(event.target.value)}
+            onChange={setCarpet_area}
             label="2.3 Carpet Area (Sq Mtrs)*"
             placeholder="6433.09"
+            type='number'
           />
         </div>
         {/* <div class='bigdiv' >
