@@ -230,52 +230,7 @@ const Form1 = () => {
             </div>
           </div>
         </section>
-        {/* <h2 class="heading3">SEWARAGE DISPOSAL</h2>
-      <section className="bankDetail">
-        <div class="projectdetails">
-          <label class="label1">
-            2.15 Whether sewerage pipe line of Municipal/local authority is
-            available near by the project site to which sewerage line of project
-            can be connected?
-            <select name="seweragePipeLine">
-              <option value="No">No</option>
-              <option value="Yes">Yes</option>
-            </select>
-          </label>
-          <label>
-            (a) Quantity of sewerage which is expected to generate from the
-            project as per NBC
-            <input type="number" name="residentialSewerage" />
-            (Residential)
-            <input type="number" name="commercialSewerage" />
-            (Commercial)
-          </label>
-          <label>
-            (b) Total quantity of sewerage proposed to be provided for the
-            project
-            <input type="number" name="totalSewerage" />
-          </label>
-          <label>
-            How sewerage of the project will be treated
-            <select name="treatmentMethod">
-              <option value="STP at Project Site">STP at Project Site</option>
-              <option value="Septic Tank with Soak Well">
-                Septic Tank with Soak Well
-              </option>
-              <option value="Other">Other</option>
-            </select>
-          </label>
-          <label>
-            Whether recycling of treated effluent is proposed
-            <select name="recyclingProposed">
-              <option value="No">No</option>
-              <option value="Yes">Yes</option>
-            </select>
-          </label>
-        </div>
 
-        
-      </section> */}
         <h2 class="heading1">SEWARAGE DISPOSAL</h2>
         <section className="s">
           <div class="projectdetails">
