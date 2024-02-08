@@ -31,7 +31,7 @@ const Form1 = () => {
   const [Electricity_supply, setElectricity_supply] = useState("");
   const [Waste_management, setWaste_management] = useState("");
   const [drinking_water_from_local, setdrinking_water_from_local] =
-    useState("Yes");
+    useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -51,7 +51,7 @@ const Form1 = () => {
         drinking_water_from_local,
       };
       console.log(body);
-      fetch("/api/post", {
+      fetch("/api/inventory_detail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
@@ -186,7 +186,7 @@ const Form1 = () => {
                 class="yesnoinput"
                 name="drinking_water_from_local"
                 value={drinking_water_from_local}
-                onChange={setdrinking_water_from_local}
+                onChange={e =>setdrinking_water_from_local(e.target.value)}
               >
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>

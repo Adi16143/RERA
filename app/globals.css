@@ -463,7 +463,7 @@ input::-webkit-inner-spin-button {
   }
   .yesnoinput {
     width: 50%;
-    height: 25px;
+    height: 34px;
     border-radius: 3px;
     border: solid rgb(214, 212, 209) 1px;
     padding: 10px;

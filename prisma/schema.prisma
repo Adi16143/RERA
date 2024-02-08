@@ -28,10 +28,11 @@ model Inventorydetail {
   
 }
 model project_details {
-  project_name  String    @id @db.VarChar(50)
+  pid Int @id @default(autoincrement())
+  project_name  String    @db.VarChar(50)
   project_type  String?   @db.VarChar(60)
   project_desc  String?   @db.VarChar(300)
-  project_sdate DateTime? @db.Date
+  project_sdate DateTime? @db.Date @default(now())
   project_edate DateTime? @db.Date
 }
 

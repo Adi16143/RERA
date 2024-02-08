@@ -1,67 +1,57 @@
 import React, { useState } from 'react';
 // import Form1 from "./DevelopmentDetails";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-const Input = ({ label, placeholder, type }) => (
-  <div class="Input">
-    <label class="label">{label}</label>
-    <input class="maininput" type={type} placeholder={placeholder} />
-  </div>
-);
+import { PrismaClient } from "@prisma/client";
+const prisma = new PrismaClient();
 
 const Form = () => 
 {
-   
-  const { PrismaClient } = require("@prisma/client");
-
-  const prisma = new PrismaClient();
-  
-  const [formData, setFormData] = useState([]);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
-
-  const handleSubmit = async (e) =>{
-    e.preventDefault();
-  
-    
-  
-    // Create an object with the form data
-    const obj = {
-      Proj_name: e.target.Proj_name.value,
-      Proj_type: e.target.Proj_type.value,
-      Proj_desc: e.target.Proj_desc.value,
-      Proj_Sdate: e.target.Proj_Sdate.value,
-      Proj_Edate: e.target.Proj_Edate.value,
-    };
-  
-    // Update the formData state using the spread operator
-    setFormData((prevData) => [...prevData, obj]);
-    async function main() {
-      await prisma.project_details.create({
-        data: {
-          project_name: Proj_name.value,
-          project_type: Proj_type.value,
-          project_desc: Proj_desc.value,
-          project_sdate: Proj_Sdate.value,
-          project_edate: Proj_Edate.value
-         
-        }
-      })
-    }
-      main()
-      .then(async () => {
-        await prisma.$disconnect();
-      })
-      .catch(async (e) => {
-        console.error(e);
-        await prisma.$disconnect();
-        process.exit(1);
-      });
-  
-
+  const router = useRouter();
+  const [project_name, setproject_name] = useState("");
+  const [project_type, setproject_type] = useState("");
+  const [project_desc, setproject_desc] = useState("");
+  const [project_sdate, setproject_sdate] = useState(new Date());
+  const [project_edate, setproject_edate] = useState();
+  // const [No_inventory_booked, setNo_inventory_booked] = useState(0);
+  // const [Road_system, setRoad_system] = useState("");
+  // const [Water_supply, setWater_supply] = useState("");
+  // const [Drainage_system, setDrainage_system] = useState("");
+  // const [Electricity_supply, setElectricity_supply] = useState("");
+  // const [Waste_management, setWaste_management] = useState("");
+  // const [drinking_water_from_local, setdrinking_water_from_local] =
+  //   useState("Yes");
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      try {
+        const body = {
+          project_name,
+          project_desc,
+          project_sdate,
+          project_edate,
+          // No_inventory_booked: parseInt(No_inventory_booked),
+          // Road_system,
+          // Water_supply,
+          // Drainage_system,
+          // Electricity_supply,
+          // Waste_management,
+          // drinking_water_from_local,
+        };
+        console.log(body);
+        fetch("/api/project_details", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+        })
+          // .then((result) => result.json())
+          .then((data) => {
+            console.log(data);
+            router.push("/");
+          });
+      } catch (error) {
+        console.error(error);
+      }
     };
   
   return(
@@ -71,15 +61,15 @@ const Form = () =>
       <div class="labels">
         <div class="Input">
           <label class="label">1.1 Project Name*</label>
-          <input class="maininput" type="text" id = "Proj_name" placeholder="Kunj Vani Villa"/>
+          <input class="maininput" type="text" name = "project_name" placeholder="Kunj Vani Villa " value={project_name} onChange={e =>setproject_name(e.target.value) }/>
         </div>
         <div class="Input">
           <label class="label">1.2 Project Type*</label>
-          <input class="maininput" type="text" id = "Proj_type" placeholder="Residential"/>
+          <input class="maininput" type="text" name = "project_type" placeholder="Residential" value={project_type} onChange={e =>setproject_type(e.target.value) }/>
         </div>      
         <div class="Input">
           <label class="label">1.3 Project Description*</label>
-          <input class="maininput" type="text" id = "Proj_desc" placeholder="Flat with all facilities..."/>
+          <input class="maininput" type="text" name = "project_desc" placeholder="Flat with all facilities..." value={project_desc} onChange={e =>setproject_desc(e.target.value) }/>
         </div>    
       </div>
       <div class="bigdiv">
@@ -92,11 +82,11 @@ const Form = () =>
       <div class="labels">
       <div class="Input">
           <label class="label">1.5 Project Start Date*</label>
-          <input class="maininput" type="date" id = "Proj_Sdate" placeholder="05/04/2020"/>
+          <input class="maininput" type="date" name = "project_sdate" placeholder="05/04/2020" value={project_sdate} onChange={e =>setproject_sdate(e.target.value) }/>
         </div>    
         <div class="Input">
           <label class="label">1.6 Project End Date*</label>
-          <input class="maininput" type="date" id = "Proj_Edate" placeholder="31/01/2024"/>
+          <input class="maininput" type="date" name = "project_edate" placeholder="31/01/2024" value={project_edate} onChange={e =>setproject_edate(e.target.value) }/>
         </div>    
         <div class="Input">
           <label class="label">1.7 Total Land Area of Approved layout(Sq Mtrs.)*</label>
