@@ -15,7 +15,17 @@ model Inventorydetail {
   Type_of_inventory String
   No_of_inventory Int
   Carpet_area Int
-
+  Area_balcony Int
+  Area_terrace Int
+  No_inventory_booked Int
+  created_at DateTime? @default(now()) 
+  Road_system String
+  Water_supply String
+  Drainage_system String
+  Electricity_supply String
+  Waste_management String
+  drinking_water_from_local String?
+  
 }
 model project_details {
   project_name  String    @id @db.VarChar(50)

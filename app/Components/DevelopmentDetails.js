@@ -5,11 +5,14 @@ import { PrismaClient } from "@prisma/client";
 import Link from "next/link";
 const prisma = new PrismaClient();
 
-const Input = ({ label, placeholder,type='text',onChange }) => (
+const Input = ({ label, placeholder, type = "text", onChange }) => (
   <div class="Input">
     <label class="labels1">{label}</label>
-    <input class="maininput" type={type} placeholder={placeholder} 
-    onChange={e=>onChange(e.target.value)}
+    <input
+      class="maininput"
+      type={type}
+      placeholder={placeholder}
+      onChange={(e) => onChange(e.target.value)}
     />
   </div>
 );
@@ -19,14 +22,37 @@ const Form1 = () => {
   const [Type_of_inventory, setType_of_inventory] = useState("");
   const [No_of_inventory, setNo_of_inventory] = useState(0);
   const [Carpet_area, setCarpet_area] = useState(0);
+  const [Area_balcony, setArea_balcony] = useState(0);
+  const [Area_terrace, setArea_terrace] = useState(0);
+  const [No_inventory_booked, setNo_inventory_booked] = useState(0);
+  const [Road_system, setRoad_system] = useState("");
+  const [Water_supply, setWater_supply] = useState("");
+  const [Drainage_system, setDrainage_system] = useState("");
+  const [Electricity_supply, setElectricity_supply] = useState("");
+  const [Waste_management, setWaste_management] = useState("");
+  const [drinking_water_from_local, setdrinking_water_from_local] =
+    useState("Yes");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const body = { Type_of_inventory, No_of_inventory:parseInt(No_of_inventory), Carpet_area:parseInt(Carpet_area) };
-      console.log(body)
+      const body = {
+        Type_of_inventory,
+        No_of_inventory: parseInt(No_of_inventory),
+        Carpet_area: parseInt(Carpet_area),
+        Area_balcony: parseInt(Area_balcony),
+        Area_terrace: parseInt(Area_terrace),
+        No_inventory_booked: parseInt(No_inventory_booked),
+        Road_system,
+        Water_supply,
+        Drainage_system,
+        Electricity_supply,
+        Waste_management,
+        drinking_water_from_local,
+      };
+      console.log(body);
       fetch("/api/post", {
-        method: 'POST',
+        method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       })
@@ -38,7 +64,6 @@ const Form1 = () => {
     } catch (error) {
       console.error(error);
     }
-    
   };
 
   return (
@@ -65,7 +90,7 @@ const Form1 = () => {
             onChange={setNo_of_inventory}
             label="2.2 No of Inventory"
             placeholder="10"
-            type='number'
+            type="number"
           />
           <Input
             name="Carpet_area"
@@ -73,7 +98,7 @@ const Form1 = () => {
             onChange={setCarpet_area}
             label="2.3 Carpet Area (Sq Mtrs)*"
             placeholder="6433.09"
-            type='number'
+            type="number"
           />
         </div>
         {/* <div class='bigdiv' >
@@ -81,121 +106,73 @@ const Form1 = () => {
           </div> */}
         <div class="labels">
           <Input
+            name="Area_balcony"
+            value={Area_balcony}
+            onChange={setArea_balcony}
             label="2.4 Area of exclusive balcony/verandah (Sq Mtr)*"
             placeholder="0"
+            type="number"
           />
           <Input
             label="2.5 Area of exclusive open terrace if any (Sq Mtr)*"
             placeholder="0"
+            name="Area_terrace"
+            value={Area_terrace}
+            onChange={setArea_terrace}
           />
-          <Input label="2.6 No. of Inventory Booked*" placeholder="0" />
+          <Input
+            label="2.6 No. of Inventory Booked*"
+            placeholder="0"
+            name="No_inventory_booked"
+            value={No_inventory_booked}
+            onChange={setNo_inventory_booked}
+          />
         </div>
-        {/* <div class="labels">
-            <Input label="1.8 Total Covered Land Area*" placeholder="453389" />
-            <Input label="1.9 Total Open Land Area" placeholder="1298776" />
-            <Input label="1.10 Land Area for Project Under Registration*" placeholder="66544" />
-          </div>
-          <div class="labels">
-            <Input label="1.11 Total Carpet Area under approved layout*" placeholder="544344" />
-            <Input label="1.12 Total Carpet Area for Project under registration" placeholder="4500" />
-            <Input label="1.13 No. of Garages*" placeholder="5" />
-          </div>
-          <div class="labels">
-            <Input label="1.14 Total Covered Land Area*" placeholder="453389" />
-            <Input label="1.15 Total Open Land Area" placeholder="1298776" />
-            <Input label="1.16 Area of Garage(Sq. Mtrs)*" placeholder="655" />
-          </div>
-          <div class="labels">
-            <Input label="1.17 Area of Open Parking*(Sq. Mtrs)" placeholder="453389" />
-            <Input label="1.18 Area of Covered Parking*(Sq. Mtrs)" placeholder="1298776" />
-          </div>
-          <div class="radioinput">
-            <label class="openlabel"> 1.19 Is the Project in TP Area?*</label>
-            <input type="radio" placeholder="" name='tparea'/>Yes(TP Area including Gamtal Area)
-            <input type="radio" placeholder="" name='tparea'/>No(Non TP Area)
-            
-          </div> */}
       </div>
 
       <h2 class="heading2">INTERNAL DEVELOPMENT WORK</h2>
       <div id="head2div">
         <div class="labels">
-          <Input label="2.7 Road System" placeholder="Self Development" />
-          <Input label="2.8 Water Supply" placeholder="Self Development" />
+          <Input
+            label="2.7 Road System"
+            placeholder="Self Development"
+            name="Road_system"
+            value={Road_system}
+            onChange={setRoad_system}
+          />
+          <Input
+            label="2.8 Water Supply"
+            placeholder="Self Development"
+            name="Water_supply"
+            value={Water_supply}
+            onChange={setWater_supply}
+          />
           <Input
             label="2.9 Sewage and Drainage System"
             placeholder="Self Development"
+            name="Drainage_system"
+            value={Drainage_system}
+            onChange={setDrainage_system}
           />
         </div>
         <div class="labels">
           <Input
             label="2.10 Electricity Supply Transformer And Sub Station"
             placeholder="Self Development"
+            name="Electricity_supply"
+            value={Electricity_supply}
+            onChange={setElectricity_supply}
           />
           <Input
             label="2.11 Solid Waste Management And Disposal*"
             placeholder="Self Development"
+            name="Waste_management"
+            value={Waste_management}
+            onChange={setWaste_management}
           />
         </div>
-        {/* <div class="longlabels labels">
-            <Input label="1.26 Revenue Survey No./Block No.(Add multiple Revenue Survey Nos. seperated by comma)*" placeholder="na" />
-            <Input label="1.27 City Survey No." placeholder="na" />
-          </div>
-    
-          <div class="labels Adrlabels">
-            <Input label="1.28 Project Address Line 1*" placeholder="Vastrapur Road" />
-            <Input label="1.29 Project Address Line 2" placeholder="" />
-          </div>
-    
-          <div class="labels">
-            <Input label="1.30 Pincode" placeholder="380051" />
-            <Input label="1.31 State/UT" placeholder="Gujrat" />
-            <Input label="1.32 District" placeholder="Ahmedabad" />
-          </div>
-          <div class="labels">
-            <Input label="1.33 Town Planning Authority" placeholder="Balva Muncipality" />
-            <Input label="1.34 Taluka" placeholder="Ahmedabad City" />
-          </div>
-    
-     */}
       </div>
       <div>
-        {/* <section>
-        <h2 class="heading1">OTHER INTERNAL DEVELOPMENT WORK</h2>
-        <h2 class="heading1">WATER SUPPLY</h2>
-        <div class="projectdetails">
-          <div class="labels">
-            <label>
-              2.14 Whether Drinking Water is to be obtained from Municipal/Local
-              Authority Pipe Line
-            </label>
-            <select class="maininput">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </div>
-          <div class="labels">
-            <label>
-              Total quantity of drinking water required for the project as per
-              NBC: (Residential)(Commercial)
-              <div>
-                <input type="number" />
-                <input type="number" />
-                <input type="text" />
-              </div>
-            </label>
-          </div>
-          <div class="radioinput">
-            <label class="openlabel"> (d) Water to be supplied from:</label>
-            <input type="radio" placeholder="" name="tparea" />
-            Borewell at Project Site
-            <input type="radio" placeholder="" name="tparea" />
-            Tankers
-            <input type="radio" placeholder="" name="tparea" />
-            Other
-          </div>
-        </div>
-      </section> */}
         <section>
           <h2 class="heading1">OTHER INTERNAL DEVELOPMENT WORK</h2>
           <h2 class="heading1">WATER SUPPLY</h2>
@@ -205,7 +182,12 @@ const Form1 = () => {
                 2.14 Whether Drinking Water is to be obtained from
                 Municipal/Local Authority Pipe Line
               </label>
-              <select class="yesnoinput">
+              <select
+                class="yesnoinput"
+                name="drinking_water_from_local"
+                value={drinking_water_from_local}
+                onChange={setdrinking_water_from_local}
+              >
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
               </select>
